@@ -4,11 +4,11 @@ Overview
 
 This repository contains my Homework 4 submission for DSCI 552 – Machine Learning for Data Science at the University of Southern California.
 
-The assignment focuses on time-series feature extraction, activity classification, and comparing different machine learning methods using the AReM dataset.
+In this assignment, I worked with time-series sensor data to understand how different machine learning models can classify human physical activities. I extracted statistical features, trained classification models, and compared their performance.
 
 Dataset
 
-The AReM dataset contains sensor measurements collected during six types of physical activities:
+I used the AReM (Activity Recognition System based on Multisensor Data Fusion) dataset, which contains sensor measurements collected during six physical activities:
 
 * Bending
 * Cycling
@@ -17,7 +17,7 @@ The AReM dataset contains sensor measurements collected during six types of phys
 * Standing
 * Walking
 
-The dataset is organized into seven folders, with bending divided into two separate folders.
+The dataset is organized into seven folders because bending is divided into two categories: bending1 and bending2.
 
 Methods Used
 
@@ -35,16 +35,33 @@ For this assignment, I worked with:
 
 Results
 
-For binary classification, the L1-penalized logistic regression model achieved a test accuracy of 94.74%.
+Binary Classification
 
-For multiclass classification, L1-penalized logistic regression also performed best, achieving 94.74% test accuracy, compared with 89.47% for Gaussian Naive Bayes and 84.21% for Multinomial Naive Bayes.
+The L1-penalized logistic regression model achieved a test accuracy of 94.74%.
 
-## Repository Structure
+Multiclass Classification
 
-text
+I compared three different classification methods:
+
+Model	Test Accuracy
+L1-Penalized Logistic Regression	94.74%
+Gaussian Naive Bayes	89.47%
+Multinomial Naive Bayes	84.21%
+
+L1-penalized logistic regression achieved the highest test accuracy among the three methods.
+
+Repository Structure
+
 DSCI-552_HW4/
 ├── data/
 │   └── AReM/
+│       ├── bending1/
+│       ├── bending2/
+│       ├── cycling/
+│       ├── lying/
+│       ├── sitting/
+│       ├── standing/
+│       └── walking/
 ├── NithyaPrasasthani_Eeri_HW4.ipynb
 ├── requirements.txt
 ├── .gitignore
@@ -52,14 +69,19 @@ DSCI-552_HW4/
 
 How to Run
 
-1. Clone the repository.
-2. Install the required Python packages:
+1. Clone the GitHub repository to your computer.
+2. Open the project folder in VS Code or Jupyter Notebook.
+3. Install the required Python libraries using:
     pip install -r requirements.txt
-3. Open the Jupyter notebook.
-4. Run all cells in order.
+4. Open NithyaPrasasthani_Eeri_HW4.ipynb.
+5. Select a Python kernel and run all cells in order.
 
-The notebook uses relative dataset paths so it can run from the repository’s root directory.
+The notebook uses relative paths to access the dataset from the data/AReM directory.
 
 Conclusion
 
-This assignment helped me understand how different classification methods perform on time-series sensor data. Based on the results, L1-penalized logistic regression performed better than the Naive Bayes models for this dataset. It also showed how feature selection and regularization can help build effective classification models.
+Through this assignment, I learned how time-series sensor measurements can be used to recognize different human activities. I also explored how feature extraction, regularization, and cross-validation can improve machine learning models.
+
+Based on my results, L1-penalized logistic regression performed better than Gaussian and Multinomial Naive Bayes for multiclass classification. It achieved the highest test accuracy and made fewer classification mistakes.
+
+Overall, this assignment helped me better understand how to prepare time-series data, select useful features, evaluate models, and compare different classification techniques.
