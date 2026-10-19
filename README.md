@@ -52,20 +52,13 @@ L1-penalized logistic regression achieved the highest test accuracy among the th
 
 Repository Structure
 
-DSCI-552_HW4/
-├── data/
-│   └── AReM/
-│       ├── bending1/
-│       ├── bending2/
-│       ├── cycling/
-│       ├── lying/
-│       ├── sitting/
-│       ├── standing/
-│       └── walking/
-├── NithyaPrasasthani_Eeri_HW4.ipynb
-├── requirements.txt
-├── .gitignore
-└── README.md
+The repository contains the following files and folders:
+
+* data/AReM/ – Contains the sensor dataset organized into seven activity folders.
+* NithyaPrasasthani_Eeri_HW4.ipynb – Main Jupyter Notebook containing the code, analysis, and results.
+* requirements.txt – Lists the Python libraries required to run the notebook.
+* .gitignore – Specifies files Git should ignore.
+* README.md – Provides an overview of the assignment and instructions for running the notebook.
 
 How to Run
 
