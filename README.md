@@ -39,8 +39,9 @@ For binary classification, the L1-penalized logistic regression model achieved a
 
 For multiclass classification, L1-penalized logistic regression also performed best, achieving 94.74% test accuracy, compared with 89.47% for Gaussian Naive Bayes and 84.21% for Multinomial Naive Bayes.
 
-Repository Structure
+## Repository Structure
 
+text
 DSCI-552_HW4/
 ├── data/
 │   └── AReM/
